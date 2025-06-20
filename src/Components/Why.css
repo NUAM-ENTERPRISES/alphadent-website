@@ -1,0 +1,121 @@
+/* ServiceSection.css */
+.service-slider {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  background: #f7f7f7;
+  padding: 2rem 0;
+}
+
+.service-slider:hover .service-track {
+  animation-play-state: paused;
+}
+
+.service-track {
+  display: flex;
+  width: calc(420px * 12); /* 6 cards duplicated */
+  animation: scroll-left 30s linear infinite;
+  animation-play-state: running;
+}
+
+.service-card {
+  width: 400px;
+  margin: 0 1rem;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  height: 520px;
+  position: relative;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  filter: none !important; /* Ensure color images */
+}
+
+.card-heading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  z-index: 2;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  border-bottom-left-radius: 20px;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 1rem;
+  color: #fff;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.overlay p {
+  padding: 0.5rem;
+  border-radius: 5px;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.overlay a {
+  align-self: flex-start;
+  color: #fff;
+  font-weight: bold;
+  padding: 0.4rem 0.8rem;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.overlay a:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+.small-center-btn {
+  background-color: #666;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.small-center-btn:hover {
+  background-color: #1abc9c;
+}
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

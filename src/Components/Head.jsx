@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
 import './Header.css';
-import { FaFacebookF, FaTwitter, FaLinkedinIn, FaGoogle } from 'react-icons/fa';
+import { FaFacebookF, FaLinkedinIn, FaInstagram } from 'react-icons/fa';
 import logo from '../assets/app_icon.png';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 const Head = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
@@ -22,21 +25,44 @@ const Head = () => {
     setMenuOpen(false); // Close menu after scrolling
   };
 
+  // Handle Home click: if not on home, navigate to home; if on home, scroll
+  const handleHomeClick = (e) => {
+    e.preventDefault();
+    setMenuOpen(false);
+    if (location.pathname !== '/') {
+      navigate('/');
+      setTimeout(() => scrollToSection('hero'), 100);
+    } else {
+      scrollToSection('hero');
+    }
+  };
+
+  // Handle Service click: if not on home, navigate to home; if on home, scroll
+  const handleServiceClick = (e) => {
+    e.preventDefault();
+    setMenuOpen(false);
+    if (location.pathname !== '/') {
+      navigate('/');
+      setTimeout(() => scrollToSection('service'), 100);
+    } else {
+      scrollToSection('service');
+    }
+  };
+
   return (
     <>
       <div className="header">
         <div className="contact-info">
-          <a href="mailto:info@thealphadent.com">info@thealphadent.com</a>
+          <p>info@alphadent.com</p>
           <span>|</span>
-          <a href="#">
-            House no 3-83/2/A, 2nd floor, Beside Kayur Vysya Bank, Nizampet village 500090
-          </a>
+          <p>
+            Alphadent House no 3-83/2/A, 2nd floorBeside kayur vysya bank, Nizampet village 500090
+          </p>
         </div>
         <div className="social-icons">
           <a href="#"><FaFacebookF /></a>
-          <a href="#"><FaTwitter /></a>
+          <a href="#"><FaInstagram /></a>
           <a href="#"><FaLinkedinIn /></a>
-          <a href="#"><FaGoogle /></a>
         </div>
       </div>
 
@@ -56,14 +82,14 @@ const Head = () => {
         <div className={`nav-links ${menuOpen ? 'active' : ''}`}>
           <img src={logo} alt="Alphadent Mobile Logo" className="mobile-logo" />
           <div className="nav-links-center">
-            <a href="#hero" onClick={(e) => { e.preventDefault(); scrollToSection('hero'); }}>Home</a>
-            <a href="#about" onClick={(e) => { e.preventDefault(); scrollToSection('about'); }}>About Us</a>
-            <a href="/services" onClick={() => setMenuOpen(false)}>Services</a>
-            <a href="/faqs" onClick={() => setMenuOpen(false)}>FAQ's</a>
-            <a href="/contact" onClick={() => setMenuOpen(false)}>Contact Us</a>
+            <a href="#hero" onClick={handleHomeClick}>Home</a>
+            <Link to="/about" onClick={() => setMenuOpen(false)}>About Us</Link>
+            <a href="#service" onClick={handleServiceClick}>Service</a>
+            <Link to="/faqs" onClick={() => setMenuOpen(false)}>FAQ's</Link>
+            <Link to="/contact" onClick={() => setMenuOpen(false)}>Contact Us</Link>
           </div>
           <div className="book-button">
-            <a href="/book-appointment" className="book" onClick={() => setMenuOpen(false)}>Book Appointment →</a>
+            <Link to="/book-appointment" className="book" onClick={() => setMenuOpen(false)}>Book Appointment →</Link>
           </div>
         </div>
       </div>

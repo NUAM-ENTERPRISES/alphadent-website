@@ -1,0 +1,73 @@
+.gallery-section {
+  width: 100%;
+  padding: 50px 0;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.gallery-title {
+  font-size: 2.5em;
+  color: #333;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+.gallery-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.gallery-track {
+  display: flex;
+  gap: 20px;
+  animation: scrollLeft 28s linear infinite; /* 8 cards * 3.5s per card = 28s for one cycle */
+}
+
+.gallery-card {
+  flex: 0 0 250px; /* Square card size */
+  height: 250px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures image fills square without distortion */
+}
+
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* Move left by half the track (since cards are doubled) */
+  }
+}
+
+.gallery-track:hover {
+  animation-play-state: paused; /* Pause animation on hover */
+}
+
+@media (max-width: 768px) {
+  .gallery-title {
+    font-size: 2em;
+  }
+  .gallery-card {
+    flex: 0 0 200px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-card {
+    flex: 0 0 150px;
+    height: 150px;
+  }
+}

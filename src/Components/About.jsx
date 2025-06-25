@@ -1,13 +1,41 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "./About.css";
 import about1 from "../assets/about1.jpg"; // Existing About Us image
 import whyus from "../assets/whyus.jpg"; 
 
 const About = () => {
+  const aboutSectionRef = useRef(null);
+  const whyChooseSectionRef = useRef(null);
+
+  
+  useEffect(() => {
+    const observerOptions = {
+      threshold: 0.1, // Trigger when 10% of the section is visible
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("section-visible");
+        } else {
+          entry.target.classList.remove("section-visible");
+        }
+      });
+    }, observerOptions);
+
+    if (aboutSectionRef.current) observer.observe(aboutSectionRef.current);
+    if (whyChooseSectionRef.current) observer.observe(whyChooseSectionRef.current);
+
+    return () => {
+      if (aboutSectionRef.current) observer.unobserve(aboutSectionRef.current);
+      if (whyChooseSectionRef.current) observer.unobserve(whyChooseSectionRef.current);
+    };
+  }, []);
+
   return (
     <div className="about-container">
       {/* About Us Section */}
-      <section id="about" className="about-section">
+      <section id="about" className="about-section" ref={aboutSectionRef}>
         <div className="about-content">
           <h2 className="about-title">About Us</h2>
           <h3 className="about-subtitle">Our Alphadent Dental Clinic</h3>
@@ -27,7 +55,7 @@ const About = () => {
       </section>
 
       {/* Why Choose Alphadent Section */}
-      <section className="why-choose-section">
+      <section className="why-choose-section" ref={whyChooseSectionRef}>
         <div className="why-choose-content">
           <h2 className="why-choose-title">Why Choose Alphadent for Your Smile Transformation?</h2>
           <ul className="why-choose-list">

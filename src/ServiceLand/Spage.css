@@ -1,0 +1,36 @@
+.spage-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+  animation: fadeIn 1s ease;
+}
+
+.spage-container h1 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #0f2e4e;
+  margin-bottom: 40px;
+}
+
+.dental-cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+@media (max-width: 900px) {
+  .spage-container h1 {
+    font-size: 28px;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

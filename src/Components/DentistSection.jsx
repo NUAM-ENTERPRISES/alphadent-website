@@ -8,6 +8,7 @@ const DentistSection = () => {
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
+  
 
   return (
     <div className="dentist-container">
@@ -20,7 +21,7 @@ const DentistSection = () => {
         <div className="testimonial-box">
           <span className="quote-icon">❝</span>
           <strong>Sarah S</strong>
-          <p><em>Dr. Sudeepthi took care of my tooth extraction. My experience was tremendously painless, and she made me...</em></p>
+          <p><em>Dr. Sudeepthi took care of my tooth extraction. My experience was tremendously painless, and she made me feel comfortable.I will always recommand him</em></p>
         </div>
       </div>
 

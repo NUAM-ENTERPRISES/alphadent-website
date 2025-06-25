@@ -1,0 +1,17 @@
+html, body {
+  overflow: auto;    /* Allow scrolling */
+  height: auto;      /* Let content define height */
+  min-height: 100vh; /* Ensure full viewport height */
+}
+
+/* Reset default styles for the landing page container */
+
+
+/* Ensure sections are scrollable and visible */
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  section {
+    padding: 20px; /* Reduce padding on mobile */
+  }
+}

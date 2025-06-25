@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './Home.css';
 import video1 from '../assets/video/video1.mp4'; // ✅ Import local video file
 import video2 from '../assets/video/video2.mp4'; // ✅ Import local video file
@@ -41,8 +42,8 @@ const Home = () => {
           <h1>Alphadent</h1>
           <p>Book An Appointment Smile Confident!</p>
           <div className="btn-container">
-            <a href="#" className="btn">BOOK AN APPOINTMENT +</a>
-            <a href="#" className="btn secondary">READ MORE +</a>
+            <Link to="/book-appointment" className="btn">BOOK AN APPOINTMENT +</Link>
+            <a href="/about" className="btn secondary">READ MORE +</a>
           </div>
         </div>
       </div>
@@ -57,8 +58,8 @@ const Home = () => {
           <h1>Alphadent</h1>
           <p>Book An Appointment Smile Confident!</p>
           <div className="btn-container">
-            <a href="#" className="btn">BOOK AN APPOINTMENT +</a>
-            <a href="#" className="btn secondary">READ MORE +</a>
+            <Link to="/book-appointment" className="btn">BOOK AN APPOINTMENT +</Link>
+            <a href="/about" className="btn secondary">READ MORE +</a>
           </div>
         </div>
       </div>
@@ -73,8 +74,8 @@ const Home = () => {
           <h1>Alphadent</h1>
           <p>Book An Appointment Smile Confident!</p>
           <div className="btn-container">
-            <a href="#" className="btn">BOOK AN APPOINTMENT +</a>
-            <a href="#" className="btn secondary">READ MORE +</a>
+            <Link to="/book-appointment" className="btn">BOOK AN APPOINTMENT +</Link>
+            <a href="/about" className="btn secondary">READ MORE +</a>
           </div>
         </div>
       </div>
@@ -89,8 +90,8 @@ const Home = () => {
           <h1>Alphadent</h1>
           <p>Book An Appointment Smile Confident!</p>
           <div className="btn-container">
-            <a href="#" className="btn">BOOK AN APPOINTMENT +</a>
-            <a href="#" className="btn secondary">READ MORE +</a>
+             <Link to="/book-appointment" className="btn">BOOK AN APPOINTMENT +</Link>
+            <a href="/about" className="btn secondary">READ MORE +</a>
           </div>
         </div>
       </div>

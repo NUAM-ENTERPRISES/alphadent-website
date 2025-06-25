@@ -1,4 +1,39 @@
 /* ServiceSection.css */
+/* Why.css */
+
+/* Centered Heading */
+  .sectionhead{
+text-align: center;
+ font-size:  1.1rem;
+   margin: 40px 0;
+   color: #00ACB1;
+   transform: translateY(20px); /* Initial offset for animation */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  .sectionhead.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+  
+
+.section-heading {
+  text-align: center;
+  font-size: 2.5rem;
+  margin: 40px 0;
+  color: #035c5c;
+  opacity: 0; /* Initial state for animation */
+  transform: translateY(20px); /* Initial offset for animation */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+
+/* Animation when heading is in view */
+.section-heading.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .service-slider {
   overflow: hidden;
   width: 100%;
@@ -13,7 +48,7 @@
 
 .service-track {
   display: flex;
-  width: calc(420px * 12); /* 6 cards duplicated */
+  width: calc(420px * 14); /* 7 cards duplicated */
   animation: scroll-left 30s linear infinite;
   animation-play-state: running;
 }
@@ -31,6 +66,7 @@
   height: 520px;
   position: relative;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
 }
 
 .service-card:hover {
@@ -47,22 +83,6 @@
   left: 0;
   z-index: 0;
   filter: none !important; /* Ensure color images */
-}
-
-.card-heading {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 0.75rem 1rem;
-  background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
-  color: #fff;
-  font-size: 1.2rem;
-  font-weight: bold;
-  z-index: 2;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(4px);
-  border-bottom-left-radius: 20px;
 }
 
 .overlay {
@@ -97,6 +117,7 @@
 .overlay a:hover {
   background: rgba(255, 255, 255, 0.4);
 }
+
 .small-center-btn {
   background-color: #666;
   color: #fff;
@@ -111,6 +132,7 @@
 .small-center-btn:hover {
   background-color: #1abc9c;
 }
+
 @keyframes scroll-left {
   0% {
     transform: translateX(0);

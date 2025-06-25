@@ -3,23 +3,22 @@ import DentistSection from '../Components/DentistSection';
 import Footer from '../Components/Footer';
 import Head from '../Components/Head';
 import Home from '../Components/Home';
-import Why from '../Components/Why';
 
 import './Pages.css';
 
 // import Services from '../Components/Services';
 // import FAQs from '../Components/FAQs';
 // import ContactUs from '../Components/ContactUs';
-
+import Why from '../Components/Why';
 const LandingPages = () => {
   return (
     <>
-      <Head />
+      {/* <Head /> */}
       <Home />
       <About />
       <Why />
       <DentistSection />
-      <Footer />
+      {/* <Footer /> */}
       {/* 
       <FAQs />
       <ContactUs />

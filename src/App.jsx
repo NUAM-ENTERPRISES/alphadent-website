@@ -5,12 +5,12 @@ import Spage from './ServiceLand/Spage';
 import Head from './Components/Head';
 import Footer from './Components/Footer';
 import Abouts from './AboutLand/Abouts';
-import { FaQ } from 'react-icons/fa6';
 import Faqs from './FaqLand/Faqs';
 import Land from './Contactland/Land';
 import BookLand from './BookLand/BookLand';
 import Confirmation from './Book/Confirmation';
 import Sland from './Sland/Sland';
+
 function App() {
   return (
     <Router>

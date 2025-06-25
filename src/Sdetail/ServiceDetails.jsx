@@ -6,6 +6,7 @@ import defaultImg from '../assets/imgg2.png';
 const ServiceDetails = () => {
   const location = useLocation();
   const service = location.state?.service;
+
   const [openIndexes, setOpenIndexes] = useState([]);
   const [fadeIn, setFadeIn] = useState(false);
 
@@ -15,7 +16,7 @@ const ServiceDetails = () => {
   }, []);
 
   if (!service) {
-    return <p className="service-error">Service data not available.</p>;
+    return <p className="service-error">Service data not available. Please go back and select a service.</p>;
   }
 
   const { title, image, descriptions, details } = service;
@@ -28,7 +29,7 @@ const ServiceDetails = () => {
 
   return (
     <div className={`service-details-container ${fadeIn ? 'fade-in' : ''}`}>
-      {/* Hero Banner */}
+      {/* Hero Section */}
       <div className="hero-banner">
         <img src={image || defaultImg} alt={title} className="hero-img" />
         <div className="hero-text-overlay">
@@ -36,24 +37,20 @@ const ServiceDetails = () => {
         </div>
       </div>
 
-      {/* Service Description */}
+      {/* Service Main Description */}
       <div className="service-description">
         <h3>{details?.heading || title}</h3>
         <p>{descriptions}</p>
       </div>
 
-      {/* Image Section Below Description */}
+      {/* Between Image Section */}
       {details?.betweenImage && (
         <div className="service-image-section">
-          <img
-            src={details.betweenImage}
-            alt="Service Visual"
-            className="service-image"
-          />
+          <img src={details.betweenImage} alt="Service visual" className="service-image" />
         </div>
       )}
 
-      {/* Subsections */}
+      {/* Sub Sections */}
       {details?.subSections?.length > 0 && (
         <div className="service-subsections">
           {details.subSections.map((section, index) => (
@@ -65,7 +62,7 @@ const ServiceDetails = () => {
         </div>
       )}
 
-      {/* Gallery */}
+      {/* Gallery Images */}
       {details?.galleryImages?.length > 0 && (
         <div className="service-gallery">
           <h2>Gallery</h2>

@@ -1,34 +1,47 @@
-/* ServiceSection.css */
 /* Why.css */
 
 /* Centered Heading */
-  .sectionhead{
-text-align: center;
- font-size:  1.1rem;
-   margin: 40px 0;
-   color: #00ACB1;
-   transform: translateY(20px); /* Initial offset for animation */
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-  }
-  .sectionhead.visible {
+.sectionhead {
+  text-align: center;
+  font-size: 1.2rem;
+  margin: 20px 0 10px 0;
+  color: #00ACB1;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.sectionhead.visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-  
+.read-more-btn {
+  background: transparent;
+  color: #fff;
+  font-weight: bold;
+  padding: 0.4rem 0.8rem;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+
+.read-more-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
 
 .section-heading {
   text-align: center;
-  font-size: 2.5rem;
-  margin: 40px 0;
+  font-size: 2.8rem;
+  margin: 10px 0 40px 0;
   color: #035c5c;
-  opacity: 0; /* Initial state for animation */
-  transform: translateY(20px); /* Initial offset for animation */
+  opacity: 0;
+  transform: translateY(20px);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+      margin-top: 23px;
 }
 
-
-/* Animation when heading is in view */
 .section-heading.visible {
   opacity: 1;
   transform: translateY(0);
@@ -48,7 +61,7 @@ text-align: center;
 
 .service-track {
   display: flex;
-  width: calc(420px * 14); /* 7 cards duplicated */
+  width: calc(420px * 22); /* 11 cards duplicated for infinite scroll */
   animation: scroll-left 30s linear infinite;
   animation-play-state: running;
 }
@@ -82,7 +95,7 @@ text-align: center;
   top: 0;
   left: 0;
   z-index: 0;
-  filter: none !important; /* Ensure color images */
+  filter: none !important;
 }
 
 .overlay {
@@ -95,6 +108,7 @@ text-align: center;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  margin-left: -6px;
 }
 
 .overlay p {
@@ -140,56 +154,4 @@ text-align: center;
   100% {
     transform: translateX(-50%);
   }
-}
-.full-service-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  padding: 20px;
-}
-
-.grid-service-card {
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  overflow: hidden;
-  cursor: pointer;
-  transition: transform 0.2s ease;
-  background-color: #fff;
-}
-
-.grid-service-card:hover {
-  transform: translateY(-5px);
-}
-
-.grid-card-image {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
-.grid-card-content {
-  padding: 15px;
-}
-
-.grid-card-content h3 {
-  font-size: 1.2rem;
-}
-
-.grid-card-content p {
-  font-size: 0.9rem;
-  color: #555;
-}
-
-.grid-card-content button {
-  margin-top: 10px;
-  padding: 8px 16px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.grid-card-content button:hover {
-  background-color: #0056b3;
 }

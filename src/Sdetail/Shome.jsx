@@ -34,7 +34,7 @@ const Shome = () => {
       {/* Shared content for all slides */}
       <div className="shared-content">
         <h1>Alphadent</h1>
-        <h2>Our Services</h2>
+        <h2>Services Details</h2>
       </div>
 
       {/* Slide container */}

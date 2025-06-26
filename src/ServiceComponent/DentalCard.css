@@ -1,108 +1,136 @@
-.dental-card-container {
+/* DentalCard.css */
+
+.dentalcard-wrapper {
+  padding: 2rem;
+  background: transparent;
+}
+
+
+.section-heading {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+.dentalcard-grid {
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  padding: 60px 20px;
-  gap: 0;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.dentalcard-flex-card {
   border-radius: 12px;
-  max-width: 1100px;
-  margin: 40px auto;
-  flex-wrap: wrap;
-  animation: fadeSlideIn 1s ease;
+  overflow: hidden;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+  background-color: white;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
 }
 
-.dental-card-image {
-  width: 500px;
-  height: 500px; /* Square shape */
-  object-fit: cover;
-  border-top-left-radius: 12px;
-  border-bottom-left-radius: 12px;
-  transition: transform 0.3s ease;
+.dentalcard-flex-card.fade-in {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-.dental-card-image:hover {
-  transform: scale(1.02);
+.dentalcard-flex-card:hover {
+  transform: scale(1.01);
 }
 
-.dental-card-content {
-  background-color: #0f2e4e;
+.dentalcard-content {
+  display: flex;
+  flex-direction: row;
+}
+
+.dentalcard-flex-card.left .dentalcard-content {
+  flex-direction: row;
+}
+
+.dentalcard-flex-card.right .dentalcard-content {
+  flex-direction: row-reverse;
+}
+
+.dentalcard-text {
+  flex: 0 0 50%;
+  background-color: #0a3d62;
   color: white;
-  padding: 40px 30px;
-  max-width: 400px;
-  border-top-right-radius: 12px;
-  border-bottom-right-radius: 12px;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: 90px;
-  transition: transform 0.3s ease;
 }
 
-.dental-card-content:hover {
-  transform: translateY(-5px);
-}
-
-.dental-card-content h3 {
-  margin-bottom: 16px;
-  font-size: 22px;
-  font-weight: bold;
-  color: #f0f0f0;
-}
-
-
-.dental-card-content p {
-  font-size: 15px;
-  line-height: 1.6;
-  margin-bottom: 24px;
-}
-
-.dental-card-content button {
-  background-color: #5c9eff;
+.dentalcard-text h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
   color: white;
+}
+
+.dentalcard-text p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+  margin-left: 13px;
+}
+
+.read-more-btn {
+  background-color: transparent;
   border: none;
+  color: white;
   padding: 10px 20px;
-  border-radius: 4px;
-  cursor: pointer;
   font-weight: 600;
-  transition: background-color 0.3s ease;
-  align-self: flex-start;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  width: fit-content;
 }
 
-.dental-card-content button:hover {
-  background-color: #397edc;
+.read-more-btn:hover {
+  background-color: #1a567e;
+  transform: scale(1.05);
 }
 
-/* Responsive */
-@media (max-width: 900px) {
-  .dental-card-container {
-    flex-direction: column;
-    align-items: center;
-    padding: 30px 20px;
+.dentalcard-image {
+  flex: 0 0 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dentalcard-left-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  max-height: 280px;
+}
+
+/* ✅ Mobile Styles: Image BELOW text */
+@media (max-width: 768px) {
+  .dentalcard-wrapper {
+    padding: 1rem 0; /* Remove side padding on mobile */
   }
 
-  .dental-card-image {
+  .dentalcard-grid {
+    padding: 0 1rem; /* Add slight inner padding to prevent full bleed */
+  }
+
+  .dentalcard-flex-card {
+    margin: 0;
     width: 100%;
-    aspect-ratio: 1 / 1; /* Keep square ratio */
+    border-radius: 12px;
+  }
+
+  .dentalcard-text,
+  .dentalcard-image {
+    padding: 0;
+    margin: 0;
+  }
+
+  .dentalcard-text {
     border-radius: 12px 12px 0 0;
-    height: auto;
   }
 
-  .dental-card-content {
+  .dentalcard-left-img {
     border-radius: 0 0 12px 12px;
-    max-width: 100%;
-    margin-top: 0;
-    padding: 30px 20px;
-  }
-}
-
-/* Entry animation */
-@keyframes fadeSlideIn {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
   }
 }

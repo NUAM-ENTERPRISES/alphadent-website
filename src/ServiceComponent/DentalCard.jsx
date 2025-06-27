@@ -39,40 +39,41 @@ const DentalCard = () => {
     <div className="dentalcard-wrapper">
       <h2 className="section-heading">Our Services</h2>
       <div className="dentalcard-grid">
-        {services.map((service, index) => {
-          const isImageLeft = index % 2 === 0;
-          return (
-            <div
-              key={index}
-              className={`dentalcard-flex-card ${isImageLeft ? 'left' : 'right'}`}
-              role="button"
-              tabIndex={0}
-              onClick={() => handleClick(service)}
-              onKeyDown={(e) => {
-                if (e.key === 'Enter') handleClick(service);
-              }}
-            >
-              <div className="dentalcard-content">
-                <div className="dentalcard-text">
-                  <h3>{service.title}</h3>
-                  <p>{service.description}</p>
-                  <button
-                    className="read-more-btn"
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      handleClick(service);
-                    }}
-                  >
-                    READ MORE
-                  </button>
-                </div>
-                <div className="dentalcard-image">
-                  <img src={service.image} alt={service.title} className="dentalcard-left-img" />
-                </div>
+        {services.map((service, index) => (
+          <div
+            key={index}
+            className="dentalcard-flex-card"
+            role="button"
+            tabIndex={0}
+            onClick={() => handleClick(service)}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter') handleClick(service);
+            }}
+          >
+            <div className="dentalcard-content">
+              <div className="dentalcard-image">
+                <img
+                  src={service.image}
+                  alt={service.title}
+                  className="dentalcard-left-img"
+                />
+              </div>
+              <div className="dentalcard-text">
+                <h3>{service.title}</h3>
+                <p>{service.description}</p>
+                <button
+                  className="read-more-btn"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    handleClick(service);
+                  }}
+                >
+                  READ MORE
+                </button>
               </div>
             </div>
-          );
-        })}
+          </div>
+        ))}
       </div>
     </div>
   );

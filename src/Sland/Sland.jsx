@@ -7,8 +7,7 @@ const Sland = () => {
   return (
     <>
      <Shome />
-      <ServiceDetails />
-
+    <ServiceDetails />
     </>
   );
 };

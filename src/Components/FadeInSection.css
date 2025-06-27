@@ -1,0 +1,50 @@
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(40px) scale(0.98);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  will-change: opacity, transform;
+}
+
+/* When visible */
+.fade-in-section.visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Variants */
+.fade-in-section.visible.up {
+  transform: translateY(0) scale(1);
+}
+
+.fade-in-section.visible.left {
+  transform: translateX(0);
+  animation: slideLeftFade 0.8s ease-out forwards;
+}
+
+.fade-in-section.visible.right {
+  transform: translateX(0);
+  animation: slideRightFade 0.8s ease-out forwards;
+}
+
+/* Optional keyframes */
+@keyframes slideLeftFade {
+  from {
+    opacity: 0;
+    transform: translateX(-40px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes slideRightFade {
+  from {
+    opacity: 0;
+    transform: translateX(40px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}

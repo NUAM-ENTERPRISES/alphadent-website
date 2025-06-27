@@ -1,6 +1,4 @@
-/* Why.css */
-
-/* Centered Heading */
+/* Section Title Styling */
 .sectionhead {
   text-align: center;
   font-size: 1.2rem;
@@ -9,37 +7,21 @@
   transform: translateY(20px);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
+
 .sectionhead.visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-.read-more-btn {
-  background: transparent;
-  color: #fff;
-  font-weight: bold;
-  padding: 0.4rem 0.8rem;
-  border: 2px solid #fff;
-  border-radius: 5px;
-  text-decoration: none;
-  transition: background 0.3s ease, color 0.3s ease;
-  cursor: pointer;
-}
-
-.read-more-btn:hover {
-  background: rgba(255, 255, 255, 0.2);
-  color: #fff;
-}
-
 .section-heading {
   text-align: center;
-  font-size: 2.8rem;
+  font-size: 2.5rem;
   margin: 10px 0 40px 0;
   color: #035c5c;
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-      margin-top: 23px;
+  margin-top: 23px;
 }
 
 .section-heading.visible {
@@ -47,28 +29,36 @@
   transform: translateY(0);
 }
 
+/* Service Slider Container */
 .service-slider {
-  overflow: hidden;
+  overflow-x: hidden;
   width: 100%;
   position: relative;
-  background: #f7f7f7;
   padding: 2rem 0;
+  scroll-behavior: smooth;
 }
 
-.service-slider:hover .service-track {
-  animation-play-state: paused;
-}
-
+/* Scrolling Track */
 .service-track {
   display: flex;
-  width: calc(420px * 22); /* 11 cards duplicated for infinite scroll */
-  animation: scroll-left 30s linear infinite;
-  animation-play-state: running;
+  gap: 2rem;
+  width: max-content;
 }
 
+/* Removed animation: scroll-stop-pause */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Individual Card */
 .service-card {
   width: 400px;
-  margin: 0 1rem;
+  margin: 0;
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -80,13 +70,21 @@
   position: relative;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
   cursor: pointer;
+  will-change: transform;
 }
 
 .service-card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-10px) scale(1.05);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
+.service-card.active {
+  transform: scale(1.1);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+  z-index: 10;
+}
+
+/* Card Image Styling */
 .card-image {
   width: 100%;
   height: 100%;
@@ -95,9 +93,11 @@
   top: 0;
   left: 0;
   z-index: 0;
-  filter: none !important;
+  filter: brightness(50%);
+  transition: transform 0.4s ease, filter 0.4s ease;
 }
 
+/* Overlay Text */
 .overlay {
   position: absolute;
   bottom: 0;
@@ -109,6 +109,19 @@
   flex-direction: column;
   gap: 0.5rem;
   margin-left: -6px;
+  transition: transform 0.4s ease;
+}
+
+.overlay h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 310px;
+  text-shadow: rgba(0, 0, 0, 0.5) 2px 2px 4px;
+}
+
+.service-card:hover .overlay,
+.service-card.active .overlay {
+  transform: translateY(-50px);
 }
 
 .overlay p {
@@ -132,26 +145,34 @@
   background: rgba(255, 255, 255, 0.4);
 }
 
+/* Buttons */
+.read-more-btn,
+.small-center-btn {
+  background: transparent;
+  color: #fff;
+  font-weight: bold;
+  padding: 0.4rem 0.8rem;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+
+.read-more-btn:hover,
+.small-center-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
 .small-center-btn {
   background-color: #666;
+  border: none;
   color: #fff;
   padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
   font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
 .small-center-btn:hover {
   background-color: #1abc9c;
-}
-
-@keyframes scroll-left {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
 }

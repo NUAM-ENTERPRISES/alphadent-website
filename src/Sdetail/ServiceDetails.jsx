@@ -65,7 +65,7 @@ const ServiceDetails = () => {
       {/* Gallery Images */}
       {details?.galleryImages?.length > 0 && (
         <div className="service-gallery">
-          <h2>Gallery</h2>
+          <h2 className='gallery'>Gallery</h2>
           <div className="gallery-grid">
             {details.galleryImages.map((img, idx) => (
               <div key={idx} className="gallery-item zoom-in">
@@ -79,7 +79,7 @@ const ServiceDetails = () => {
       {/* FAQ Accordion */}
       {details?.faq?.length > 0 && (
         <div className="service-faq">
-          <h2>Frequently Asked Questions</h2>
+          <h2 className='faq'>Frequently Asked Questions</h2>
           {details.faq.map((item, index) => (
             <div key={index} className={`faq-item ${openIndexes.includes(index) ? 'open' : ''}`}>
               <div className="faq-question" onClick={() => toggleFAQ(index)}>

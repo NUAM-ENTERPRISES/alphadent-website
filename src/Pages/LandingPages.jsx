@@ -5,6 +5,7 @@ import Head from '../Components/Head';
 import Home from '../Components/Home';
 
 import './Pages.css';
+import FadeInSection from '../Components/FadeInSection';
 
 // import Services from '../Components/Services';
 // import FAQs from '../Components/FAQs';
@@ -14,10 +15,10 @@ const LandingPages = () => {
   return (
     <>
       {/* <Head /> */}
-      <Home />
-      <About />
-      <Why />
-      <DentistSection />
+       <FadeInSection direction="up" delay={0}><Home /></FadeInSection>
+      <FadeInSection direction="left" delay={100}><About /></FadeInSection>
+      <FadeInSection direction="right" delay={200}><Why /></FadeInSection>
+      <FadeInSection direction="up" delay={300}><DentistSection /></FadeInSection>
       {/* <Footer /> */}
       {/* 
       <FAQs />

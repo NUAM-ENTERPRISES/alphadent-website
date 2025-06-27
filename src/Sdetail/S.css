@@ -41,10 +41,10 @@
   background-color: #fefefe;
   text-align: left;
 }
-.service-description h2 {
-  text-align: left;
+.service-description h3 {
   color: #035c5c;
-  margin-bottom: 15px;
+  font-weight: 600;
+  font-size: 28px;
 }
 
 .service-description p {
@@ -60,15 +60,15 @@
   text-align: left;
   font-size: 24px;
   font-weight: 600;
-  color: #222;
+  color: #035c5c;
   margin-bottom: 8px;
 }
 
 .subsection-card p {
   text-align: left;
-  font-size: 16px;
+  font-size: 25px;
   line-height: 1.6;
-  color: #555;
+  color:#555;
 }
 
 
@@ -89,7 +89,9 @@
 .service-gallery {
   padding: 20px;
 }
-
+.gallery{
+  color: #035c5c;
+}
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -108,6 +110,9 @@
 }
 
 /* FAQ Accordion */
+.faq{
+  color: #035c5c;
+}
 .service-faq {
   margin-top: 30px;
   padding: 20px;
@@ -116,14 +121,14 @@
 }
 
 .faq-item {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #035c5c;
   padding: 10px 0;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
 .faq-item.open {
-  background-color: #e0f7fa;
+  background-color: white;
 }
 
 .faq-question {
@@ -131,13 +136,18 @@
   justify-content: space-between;
   align-items: center;
   font-weight: bold;
-  color: #0277bd;
+  color: #035c5c;
+  transition: background-color 0.3s ease;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 20px;
 }
 
 .faq-answer {
   padding-top: 10px;
-  color: #333;
+  color: #035c5c;
   animation: slideDown 0.3s ease;
+  font-size: 22px;
 }
 
 @keyframes slideDown {
@@ -146,7 +156,7 @@
 }
 
 .faq-item.open .faq-question h4 {
-  color: #01579b;
+  color: #035c5c;
 }
 
 /* Error Message Style */
@@ -163,8 +173,26 @@
 
 .service-image-section img {
   max-width: 100%;
-      width: 630px;
+  width: 630px;
   height: auto;
   border-radius: 10px;
   object-fit: cover;
+  display: block;
+  margin: 0 auto; /* ✅ Center horizontally on all screens */
+}
+
+/* Responsive for Tablets and Below */
+@media (max-width: 768px) {
+  .service-image-section img {
+    width: 90%;       /* ✅ Scale image smaller on tablets/mobile */
+    max-width: 100%;
+  }
+}
+
+/* Extra Small Mobile (Optional below 480px) */
+@media (max-width: 480px) {
+  .service-image-section img {
+    width: 100%;
+    border-radius: 8px;
+  }
 }

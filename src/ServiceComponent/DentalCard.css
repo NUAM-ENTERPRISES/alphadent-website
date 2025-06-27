@@ -1,11 +1,10 @@
-/* DentalCard.css */
-
+/* Wrapper */
 .dentalcard-wrapper {
   padding: 2rem;
   background: transparent;
 }
 
-
+/* Heading */
 .section-heading {
   text-align: center;
   font-size: 2rem;
@@ -13,13 +12,19 @@
   font-weight: 600;
 }
 
+/* Grid Layout */
 .dentalcard-grid {
   display: flex;
-  flex-direction: column;
-  gap: 2.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0 1rem;
 }
 
+/* Card */
 .dentalcard-flex-card {
+  display: flex;
+  flex-direction: column;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
@@ -27,6 +32,9 @@
   opacity: 0;
   transform: translateY(30px);
   transition: all 0.6s ease;
+  width: calc(50% - 1rem);
+  max-width: 600px;
+  height: 400px;
 }
 
 .dentalcard-flex-card.fade-in {
@@ -38,23 +46,30 @@
   transform: scale(1.01);
 }
 
+/* Content */
 .dentalcard-content {
   display: flex;
   flex-direction: row;
+  height: 100%;
 }
 
-.dentalcard-flex-card.left .dentalcard-content {
-  flex-direction: row;
+/* Image */
+.dentalcard-image {
+  flex: 1;
+  height: 100%;
 }
 
-.dentalcard-flex-card.right .dentalcard-content {
-  flex-direction: row-reverse;
+.dentalcard-left-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0;
 }
 
+/* Text */
 .dentalcard-text {
-  flex: 0 0 50%;
-  background-color: #0a3d62;
-  color: white;
+  flex: 1;
+  background-color: #faf7ef;
   padding: 2rem;
   display: flex;
   flex-direction: column;
@@ -63,74 +78,63 @@
 
 .dentalcard-text h3 {
   font-size: 1.5rem;
-  margin-bottom: 1rem;
-  color: white;
+  margin-bottom: 0.6rem;
+  color: #035c5c;
 }
 
 .dentalcard-text p {
   font-size: 1rem;
   line-height: 1.6;
-  margin-bottom: 1.2rem;
-  margin-left: 13px;
+  color: #555;
+  margin-bottom: 1rem;
 }
 
 .read-more-btn {
   background-color: transparent;
   border: none;
-  color: white;
-  padding: 10px 20px;
+  color: grey;
+  padding: 6px 12px;
   font-weight: 600;
+  font-size: 0.9rem;
   cursor: pointer;
   transition: background-color 0.2s ease, transform 0.2s ease;
   width: fit-content;
 }
 
 .read-more-btn:hover {
-  background-color: #1a567e;
+  background-color: #035c5c;
+  color: white;
   transform: scale(1.05);
 }
 
-.dentalcard-image {
-  flex: 0 0 40%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.dentalcard-left-img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  max-height: 280px;
-}
-
-/* ✅ Mobile Styles: Image BELOW text */
+/* Responsive */
 @media (max-width: 768px) {
-  .dentalcard-wrapper {
-    padding: 1rem 0; /* Remove side padding on mobile */
-  }
-
   .dentalcard-grid {
-    padding: 0 1rem; /* Add slight inner padding to prevent full bleed */
+    flex-direction: column;
   }
 
   .dentalcard-flex-card {
-    margin: 0;
     width: 100%;
-    border-radius: 12px;
+    height: auto;
   }
 
-  .dentalcard-text,
-  .dentalcard-image {
-    padding: 0;
-    margin: 0;
+  .dentalcard-content {
+    flex-direction: column !important; /* ✅ Makes image stack on top */
   }
 
+  .dentalcard-image,
   .dentalcard-text {
-    border-radius: 12px 12px 0 0;
+    width: 100%;
   }
 
   .dentalcard-left-img {
-    border-radius: 0 0 12px 12px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 0;
+  }
+
+  .dentalcard-text {
+    padding: 1.2rem;
   }
 }

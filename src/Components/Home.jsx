@@ -42,8 +42,8 @@ const Home = () => {
           <h1>Alphadent</h1>
           <p>Book An Appointment Smile Confident!</p>
           <div className="btn-container">
-            <Link to="/book-appointment" className="btn">BOOK APPOINTMENT +</Link>
-            <a href="/about" className="btn secondary">READ MORE +</a>
+            <Link to="/book-appointment" className="btn book-appointment">BOOK APPOINTMENT +</Link>
+            <a href="/about" className="btn read-more">READ MORE +</a>
           </div>
         </div>
       </div>
@@ -58,8 +58,8 @@ const Home = () => {
           <h1>Alphadent</h1>
           <p>Book An Appointment Smile Confident!</p>
           <div className="btn-container">
-            <Link to="/book-appointment" className="btn">BOOK APPOINTMENT +</Link>
-            <a href="/about" className="btn secondary">READ MORE +</a>
+        <Link to="/book-appointment" className="btn book-appointment">BOOK APPOINTMENT +</Link>
+            <a href="/about" className="btn read-more">READ MORE +</a>
           </div>
         </div>
       </div>
@@ -74,8 +74,8 @@ const Home = () => {
           <h1>Alphadent</h1>
           <p>Book An Appointment Smile Confident!</p>
           <div className="btn-container">
-            <Link to="/book-appointment" className="btn">BOOK APPOINTMENT +</Link>
-            <a href="/about" className="btn secondary">READ MORE +</a>
+            <Link to="/book-appointment" className="btn book-appointment">BOOK APPOINTMENT +</Link>
+            <a href="/about" className="btn read-more">READ MORE +</a>
           </div>
         </div>
       </div>
@@ -90,8 +90,8 @@ const Home = () => {
           <h1>Alphadent</h1>
           <p>Book An Appointment Smile Confident!</p>
           <div className="btn-container">
-             <Link to="/book-appointment" className="btn">BOOK APPOINTMENT +</Link>
-            <a href="/about" className="btn secondary">READ MORE +</a>
+            <Link to="/book-appointment" className="btn book-appointment">BOOK APPOINTMENT +</Link>
+            <a href="/about" className="btn read-more">READ MORE +</a>
           </div>
         </div>
       </div>

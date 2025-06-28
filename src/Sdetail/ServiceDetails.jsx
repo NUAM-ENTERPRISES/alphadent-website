@@ -1,25 +1,26 @@
 import React, { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import './S.css';
+import services from '../Data/services';
 import defaultImg from '../assets/imgg2.png';
 
 const ServiceDetails = () => {
-  const location = useLocation();
-  const service = location.state?.service;
-
-  const [openIndexes, setOpenIndexes] = useState([]);
+  const { serviceTitle } = useParams();
+  const [service, setService] = useState(null);
   const [fadeIn, setFadeIn] = useState(false);
+  const [openIndexes, setOpenIndexes] = useState([]);
 
   useEffect(() => {
     setFadeIn(true);
     window.scrollTo(0, 0);
-  }, []);
 
-  if (!service) {
-    return <p className="service-error">Service data not available. Please go back and select a service.</p>;
-  }
+    // Find service by title (case-insensitive match)
+    const foundService = services.find(
+      (s) => s.title.toLowerCase() === decodeURIComponent(serviceTitle).toLowerCase()
+    );
 
-  const { title, image, descriptions, details } = service;
+    setService(foundService);
+  }, [serviceTitle]);
 
   const toggleFAQ = (index) => {
     setOpenIndexes((prev) =>
@@ -27,9 +28,19 @@ const ServiceDetails = () => {
     );
   };
 
+  if (!service) {
+    return (
+      <div className="service-error">
+        <h2>Service Not Found</h2>
+        <p>No data found for "<strong>{serviceTitle}</strong>". Please check the link.</p>
+      </div>
+    );
+  }
+
+  const { title, image, descriptions, details } = service;
+
   return (
     <div className={`service-details-container ${fadeIn ? 'fade-in' : ''}`}>
-      {/* Hero Section */}
       <div className="hero-banner">
         <img src={image || defaultImg} alt={title} className="hero-img" />
         <div className="hero-text-overlay">
@@ -37,20 +48,17 @@ const ServiceDetails = () => {
         </div>
       </div>
 
-      {/* Service Main Description */}
       <div className="service-description">
         <h3>{details?.heading || title}</h3>
         <p>{descriptions}</p>
       </div>
 
-      {/* Between Image Section */}
       {details?.betweenImage && (
         <div className="service-image-section">
           <img src={details.betweenImage} alt="Service visual" className="service-image" />
         </div>
       )}
 
-      {/* Sub Sections */}
       {details?.subSections?.length > 0 && (
         <div className="service-subsections">
           {details.subSections.map((section, index) => (
@@ -62,7 +70,6 @@ const ServiceDetails = () => {
         </div>
       )}
 
-      {/* Gallery Images */}
       {details?.galleryImages?.length > 0 && (
         <div className="service-gallery">
           <h2 className='gallery'>Gallery</h2>
@@ -76,7 +83,6 @@ const ServiceDetails = () => {
         </div>
       )}
 
-      {/* FAQ Accordion */}
       {details?.faq?.length > 0 && (
         <div className="service-faq">
           <h2 className='faq'>Frequently Asked Questions</h2>

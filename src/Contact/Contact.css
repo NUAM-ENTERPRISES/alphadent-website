@@ -6,12 +6,16 @@
   margin: auto;
   color: #222;
   animation: fadeInUp 1s ease-in-out;
+  
 }
 
 h2, h3 {
   text-align: center;
   margin-bottom: 20px;
-  color: #004080;
+  color: white;
+}
+.contactss{
+  color: #035c5c;
 }
 
 /* Contact Info Section */
@@ -27,7 +31,7 @@ h2, h3 {
 }
 
 .info-item {
-  background: #f0f8ff;
+  background: #035c5c;
   padding: 20px 30px;
   border-radius: 16px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -40,7 +44,7 @@ h2, h3 {
 
 /* Form Section */
 .contact-form {
-  background: #ffffff;
+  background: #035c5c05;
   padding: 40px 30px;
   border-radius: 20px;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
@@ -60,7 +64,7 @@ form {
 label {
   margin-bottom: 6px;
   font-weight: 600;
-  color: #004080;
+  color: #035c5c;
 }
 
 input,
@@ -70,18 +74,19 @@ textarea {
   border: 1px solid #ccc;
   transition: 0.3s ease;
   font-size: 1rem;
+  color: #035c5c;
 }
 
 input:focus,
 textarea:focus {
-  border-color: #0077cc;
+  border-color: #035c5c;
   outline: none;
   box-shadow: 0 0 8px rgba(0, 119, 204, 0.2);
 }
 
 button {
   padding: 12px 20px;
-  background: #0077cc;
+  background: #000000;
   color: white;
   border: none;
   border-radius: 10px;

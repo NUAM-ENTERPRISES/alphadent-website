@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Header.css';
-import { FaFacebookF, FaLinkedinIn, FaInstagram } from 'react-icons/fa';
+import { FaFacebookF, FaLinkedinIn, FaInstagram,FaGoogle } from 'react-icons/fa';
 import logo from '../assets/app_icon.png';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 
@@ -61,8 +61,9 @@ const Head = () => {
         </div>
         <div className="social-icons">
           <a href="#"><FaFacebookF /></a>
-          <a href="#"><FaInstagram /></a>
+          <a href="https://www.instagram.com/thealphadent/"><FaInstagram /></a>
           <a href="#"><FaLinkedinIn /></a>
+          <a href="https://maps.app.goo.gl/RLQ7GgoimpFpBFE78"><FaGoogle /></a>
         </div>
       </div>
 

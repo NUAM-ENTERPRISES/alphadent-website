@@ -52,50 +52,63 @@
     animation: slideIn 1.5s ease-out forwards 0.4s;
 }
 
-.btn-container {
-    display: flex;
-    flex-direction: row; /* Horizontal for desktop, vertical for mobile */
-    justify-content: center;
-    gap: 15px;
-    margin-top: 20px;
-    transform: translateX(-100%);
-    animation: slideIn 1.5s ease-out forwards 0.6s;
-}
-
+/* Base Button Style for Both */
 .btn {
     display: inline-block;
-    padding: 15px 30px;
-    background-color: #1abc9c;
-    color: white;
+    padding: 8px 18px;            /* Reduced padding */
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 6px;           /* Slightly smaller border radius */
     transition: background-color 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s;
     text-align: center;
-    width: 200px;
-    font-size: 1em;
+    width: 150px;                 /* Reduced width */
+    font-size: 0.75em;            /* Smaller font */
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
-.btn:hover {
-    background-color: #16a085;
-    transform: scale(1.05);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+/* Book Appointment Button (Light Blue with White Text) */
+.btn.book-appointment {
+    background-color: #00acb1;
     color: white;
+    border: none;
+    font-size: 12px;
 }
 
-.btn.secondary {
-    background-color: rgba(255, 255, 255, 0.8);
-    color: #1abc9c;
-    border: 2px solid #1abc9c;
-}
-
-.btn.secondary:hover {
-    background-color: rgba(255, 255, 255, 1);
-    color: #16a085;
+.btn.book-appointment:hover {
+    background-color: #87CEFA;     /* Lighter Blue on hover */
+    color: white;
     transform: scale(1.05);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.nav-btns {
+/* Read More Button (White with Blue Text and Border) */
+.btn.read-more {
+    background-color: white;
+    color:#16a085;                /* Blue text */
+    font-size: 12px;   /* Blue border */
+}
+
+
+.btn.read-more:hover {
+    background-color: white;
+    color: #0056b3;                /* Darker Blue on hover */
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Button container spacing */
+.btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;                     /* Smaller gap between buttons */
+    margin-top: 15px;              /* Less top margin */
+    flex-wrap: wrap;
+}
+
+.nav-btn {
     position: absolute;
     display: flex;
     gap: 10px;
@@ -180,7 +193,7 @@
         align-items: center;
     }
     .btn {
-        width: 180px; /* Adjusted width for mobile */
+        width: 252px; /* Adjusted width for mobile */
         font-size: 0.9em; /* Smaller font size */
     }
     .nav-btn {
@@ -195,6 +208,11 @@
     .nav-btn.active {
         background-color: #16a085; /* Highlight active dot */
     }
+   .btn {
+        width: 120px;                /* Even smaller width for mobile */
+        font-size: 10px;             /* Font size 10px */
+        padding: 6px 12px;           /* Reduced padding */
+    }
 }
 
 /* Desktop-specific adjustments to match the image */
@@ -206,12 +224,17 @@
         font-size: 1.8em; /* Adjusted to match desktop image */
     }
     .btn {
-        width: 250px; /* Wider buttons to match desktop image */
-        font-size: 1.2em; /* Larger font for desktop */
+        width: 20px; /* Wider buttons to match desktop image */
+        font-size: 10px;; /* Larger font for desktop */
     }
     .bottom-center {
         display: none; /* Disable bottom dots on desktop */
     }
+    .btn {
+        width: 150px;
+        font-size: 0.75em;
+    }
+
 }
 
 @keyframes slideIn {

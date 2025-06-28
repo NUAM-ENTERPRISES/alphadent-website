@@ -84,7 +84,7 @@ const Contact = () => {
     <div className="contact-us-container fade-in">
       {/* Contact Info */}
       <section className="contact-details">
-        <h2>Contact Us</h2>
+        <h2 className='contactss'>Contact Us</h2>
         <div className="contact-info">
           <div className="info-item">
             <h3>Address</h3>

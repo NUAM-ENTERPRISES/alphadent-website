@@ -1,0 +1,203 @@
+.footer-container {
+  background-color: #1a3c3c;
+  color: #ffffff;
+  padding: 40px 20px;
+  font-family: 'Georgia', serif;
+  box-sizing: border-box;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 20px;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+  flex: 1;
+  min-width: 250px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-logo {
+  width: 150px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.contact-info {
+  text-align: center;
+  gap: 3px;
+}
+
+.contact-info p {
+  font-size: 1rem;
+  color: white;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.contact-icon {
+  font-size: 1.2rem;
+  color: white;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.contact-info a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+  color: #ffffff;
+}
+
+.footer-center,
+.footer-right {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.footer-title {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: white;
+  margin-top: 49px;
+}
+
+.service-list,
+.useful-links {
+  list-style: none;
+  padding: 0;
+  
+}
+.footer-center {
+  flex: 1;
+  padding: 10px 20px;
+}
+
+
+.service-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.service-list li {
+  margin-bottom: 10px;
+}
+
+.service-list li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s, padding-left 0.3s;
+  font-size: 0.95rem;
+}
+
+.service-list li a:hover {
+  color: #00ACB1; /* Light Blue on hover */
+  padding-left: 8px; /* Slight indent on hover */
+}
+
+
+.service-list li,
+.useful-links li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: #0f8b8d;
+}
+
+.useful-links li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.useful-links li a:hover {
+  color: #0f8b8d;
+}
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;        /* ✅ This creates spacing between icons */
+  margin-top: 20px; /* ✅ Top space from other elements */
+}
+.social-icon:hover {
+  transform: scale(1.2);
+  color: #0f8b8d;
+}
+
+.social-icons a {
+  color: #ffffff;
+  font-size: 1.8rem;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #0f8b8d; /* Blue-green hover */
+  transform: scale(1.2);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #333333;
+  margin-top: 20px;
+}
+
+.footer-bottom p {
+  font-size: 0.9rem;
+  color: #cccccc;
+}
+
+/* RESPONSIVE STYLES */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
+  }
+
+  .footer-left,
+  .footer-center,
+  .footer-right {
+    width: 100%;
+    padding: 55px 20px;
+    margin-top: -71px;
+  }
+
+  .contact-info p {
+    justify-content: center;
+    text-align: center;
+    padding: 0;
+    margin: 0 auto 10px;
+  }
+
+  .footer-logo {
+    margin-bottom: 20px;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+}

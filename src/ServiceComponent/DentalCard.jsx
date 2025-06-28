@@ -1,11 +1,15 @@
 import React, { useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import './DentalCard.css';
+import servicesData from '../Data/services';
+import defaultImg from '../assets/imgg2.png';
 
-const DentalCard = () => {
+const DentalCard = ({ services: propsServices }) => {
   const location = useLocation();
   const navigate = useNavigate();
-  const services = location.state?.services;
+
+  // ✅ Fallback priority: props > location.state > default data
+  const services = propsServices || location.state?.services || servicesData;
 
   useEffect(() => {
     const cards = document.querySelectorAll('.dentalcard-flex-card');
@@ -53,7 +57,7 @@ const DentalCard = () => {
             <div className="dentalcard-content">
               <div className="dentalcard-image">
                 <img
-                  src={service.image}
+                  src={service.image || defaultImg}
                   alt={service.title}
                   className="dentalcard-left-img"
                 />

@@ -9,7 +9,8 @@ import Faqs from './FaqLand/Faqs';
 import Land from './Contactland/Land';
 import BookLand from './BookLand/BookLand';
 import Confirmation from './Book/Confirmation';
-import Sland from './Sland/Sland';  // Assuming Sland is your ServiceDetails component
+import Sland from './Sland/Sland';
+import ServiceLand from './ServiceLand/Spage';
 
 function App() {
   return (
@@ -22,7 +23,8 @@ function App() {
         <Route path="/contact" element={<Land />} />
         <Route path="/book-appointment" element={<BookLand />} />
         <Route path="/confirmation" element={<Confirmation />} />
-        <Route path="/service/details/:serviceTitle" element={<Sland />} />  {/* ✅ FIXED */}
+        <Route path="/service/details/:serviceTitle" element={<Sland />} />
+        <Route path="/services" element={<ServiceLand />} />  {/* ✅ Shows all service cards */}
         <Route path="/services" element={<Spage />} />
       </Routes>
       <Footer />

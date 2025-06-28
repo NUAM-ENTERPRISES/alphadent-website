@@ -60,7 +60,7 @@ const Head = () => {
           </p>
         </div>
         <div className="social-icons">
-          <a href="#"><FaFacebookF /></a>
+          <a href="https://www.instagram.com/thealphadent/"><FaFacebookF /></a>
           <a href="https://www.instagram.com/thealphadent/"><FaInstagram /></a>
           <a href="#"><FaLinkedinIn /></a>
           <a href="https://maps.app.goo.gl/RLQ7GgoimpFpBFE78"><FaGoogle /></a>
@@ -85,7 +85,7 @@ const Head = () => {
           <div className="nav-links-center">
             <a href="#hero" onClick={handleHomeClick}>Home</a>
             <Link to="/about" onClick={() => setMenuOpen(false)}>About Us</Link>
-            <a href="#service" onClick={handleServiceClick}>Service</a>
+            < Link to="/services" onClick={()=> setMenuOpen(false)}>Services</Link>
             <Link to="/faqs" onClick={() => setMenuOpen(false)}>FAQ's</Link>
             <Link to="/contact" onClick={() => setMenuOpen(false)}>Contact Us</Link>
           </div>

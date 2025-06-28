@@ -58,7 +58,7 @@ const services = [
   },
   {
     title: 'Dental Implants',
-    description: 'Replace missing teeth with lasting solutions.',
+    description: 'Replace missing teeth with natural-looking solutions for lasting smile',
     image: implants,
     details: {
       heading: 'About Dental Implants',
@@ -89,7 +89,7 @@ const services = [
     }
   },
   { title: 'General Dentistry', 
-    description: 'Comprehensive dental services.', 
+    description: 'General dentistry encompasses a comprehensive range of dental services', 
     image: general ,
     details: {
       heading: 'About General Dentistry',

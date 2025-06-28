@@ -1,87 +1,70 @@
 import React, { useEffect, useRef, useMemo } from 'react';
 import './Gallery.css';
-import imgg2 from '../assets/imgg2.png'; // Replace with your actual image path
-const placeholderImage = 'https://via.placeholder.com/250'; // Fallback image
+import aligners from '../assets/aligners.jpg';
+import healthreview from '../assets/healthreview.jpg';
+import implants from '../assets/implants-.jpg';
+import general from '../assets/general.jpg';
+import cosmetic from '../assets/cosmetic.jpg';
+import pedia from '../assets/pedia.jpg';
+import surgery from '../assets/surgery.jpg';
+import whitening from '../assets/whitening.jpg';
+import lasers from '../assets/lasers.jpg';
+import rehab from '../assets/rehab.jpg';
+import rootcanal from '../assets/rootcanal.jpg';
 
 const Gallery = () => {
   const galleryRef = useRef(null);
   const intervalRef = useRef(null);
-  const cards = useMemo(() => Array(8).fill({ image: imgg2 || placeholderImage, alt: 'Gallery Image' }), []);
+
+  const cards = useMemo(() => [
+    { image: aligners, alt: 'Gallery Image 1' },
+    { image: healthreview, alt: 'Gallery Image 2' },
+    { image: implants, alt: 'Gallery Image 3' },
+    { image: general, alt: 'Gallery Image 4' },
+    { image: cosmetic, alt: 'Gallery Image 5' },
+    { image: pedia, alt: 'Gallery Image 6' },
+    { image: surgery, alt: 'Gallery Image 7' },
+    { image: whitening, alt: 'Gallery Image 8' },
+    { image: lasers, alt: 'Gallery Image 9' },
+    { image: rehab, alt: 'Gallery Image 10' },
+    { image: rootcanal, alt: 'Gallery Image 11' },
+    // { image: img12, alt: 'Gallery Image 12' },
+  ], []);
 
   useEffect(() => {
     const gallery = galleryRef.current;
-    if (!gallery) {
-      console.log('Gallery ref is null');
-      return;
-    }
+    if (!gallery) return;
 
-    // Wait for images to load and DOM to stabilize
-    const initializeScroll = () => {
-      if (!gallery.children[0]) {
-        console.log('No children found in gallery');
-        return;
+    const cardWidth = gallery.children[0]?.offsetWidth + 20; // Card width + gap
+    let scrollPosition = 0;
+    const totalWidth = cardWidth * cards.length;
+
+    const scroll = () => {
+      scrollPosition += cardWidth;
+      if (scrollPosition >= totalWidth) {
+        scrollPosition = 0;
+        gallery.style.transition = 'none';
+        gallery.style.transform = `translateX(0px)`;
+        setTimeout(() => {
+          gallery.style.transition = 'transform 0.5s ease';
+        }, 50);
+      } else {
+        gallery.style.transform = `translateX(-${scrollPosition}px)`;
       }
-
-      const cardWidth = gallery.children[0].offsetWidth + 20; // Card width + gap
-      if (cardWidth <= 20) {
-        console.log('Card width is invalid:', cardWidth);
-        return;
-      }
-
-      let scrollPosition = 0;
-      const totalWidth = cardWidth * cards.length;
-
-      const scroll = () => {
-        scrollPosition += cardWidth;
-        if (scrollPosition >= totalWidth) {
-          scrollPosition = 0;
-          gallery.style.transition = 'none';
-          gallery.style.transform = `translateX(0px)`;
-          setTimeout(() => {
-            gallery.style.transition = 'transform 0.5s ease';
-            console.log('Reset scroll position');
-          }, 50);
-        } else {
-          gallery.style.transform = `translateX(-${scrollPosition}px)`;
-          console.log('Scrolling to:', scrollPosition);
-        }
-      };
-
-      // Start scrolling
-      intervalRef.current = setInterval(scroll, 3500);
-      console.log('Interval started');
-
-      // Pause on hover
-      const handleMouseEnter = () => {
-        if (intervalRef.current) {
-          clearInterval(intervalRef.current);
-          console.log('Scroll paused');
-        }
-      };
-
-      const handleMouseLeave = () => {
-        intervalRef.current = setInterval(scroll, 3500);
-        console.log('Scroll resumed');
-      };
-
-      gallery.addEventListener('mouseenter', handleMouseEnter);
-      gallery.addEventListener('mouseleave', handleMouseLeave);
-
-      // Cleanup
-      return () => {
-        if (intervalRef.current) clearInterval(intervalRef.current);
-        gallery.removeEventListener('mouseenter', handleMouseEnter);
-        gallery.removeEventListener('mouseleave', handleMouseLeave);
-        console.log('Interval and listeners cleaned up');
-      };
     };
 
-    // Delay initialization to ensure DOM is ready
-    const timeout = setTimeout(initializeScroll, 100);
+    intervalRef.current = setInterval(scroll, 3000);
+
+    const pauseScroll = () => clearInterval(intervalRef.current);
+    const resumeScroll = () => intervalRef.current = setInterval(scroll, 3000);
+
+    gallery.addEventListener('mouseenter', pauseScroll);
+    gallery.addEventListener('mouseleave', resumeScroll);
 
     return () => {
-      clearTimeout(timeout);
-      if (intervalRef.current) clearInterval(intervalRef.current);
+      clearInterval(intervalRef.current);
+      gallery.removeEventListener('mouseenter', pauseScroll);
+      gallery.removeEventListener('mouseleave', resumeScroll);
     };
   }, [cards]);
 
@@ -92,7 +75,7 @@ const Gallery = () => {
         <div className="gallery-track" ref={galleryRef}>
           {cards.map((card, index) => (
             <div className="gallery-card" key={index}>
-              <img src={card.image} alt={card.alt} className="gallery-image" onError={() => console.log(`Image failed to load: ${card.image}`)} />
+              <img src={card.image} alt={card.alt} className="gallery-image" />
             </div>
           ))}
         </div>

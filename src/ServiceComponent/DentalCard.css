@@ -21,7 +21,6 @@
   padding: 0 1rem;
 }
 
-/* Card */
 .dentalcard-flex-card {
   display: flex;
   flex-direction: column;
@@ -30,11 +29,12 @@
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
   background-color: white;
   opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.6s ease;
+  transform: translateY(100px);
+  transition: opacity 0.6s ease, transform 0.6s ease, box-shadow 0.3s ease;
   width: calc(50% - 1rem);
   max-width: 600px;
   height: 400px;
+  will-change: transform, box-shadow;
 }
 
 .dentalcard-flex-card.fade-in {
@@ -42,9 +42,11 @@
   transform: translateY(0);
 }
 
-.dentalcard-flex-card:hover {
-  transform: scale(1.01);
+.dentalcard-flex-card.fade-in:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
 }
+
 
 /* Content */
 .dentalcard-content {

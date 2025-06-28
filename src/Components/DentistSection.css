@@ -216,9 +216,9 @@ html, body {
   }
 
   .dentist-title-bold {
-    font-size: 1.2rem;
-    bottom: -6px;
-    left: 8px;
+      font-size: 2.2rem;
+      bottom: -21px;
+      left: 13px;
   }
 
   .dentist-left p {

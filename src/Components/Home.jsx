@@ -42,7 +42,7 @@ const Home = () => {
           <h1>Alphadent</h1>
           <p>Book An Appointment Smile Confident!</p>
           <div className="btn-container">
-            <Link to="/book-appointment" className="btn">BOOK AN APPOINTMENT +</Link>
+            <Link to="/book-appointment" className="btn">BOOK APPOINTMENT +</Link>
             <a href="/about" className="btn secondary">READ MORE +</a>
           </div>
         </div>
@@ -58,7 +58,7 @@ const Home = () => {
           <h1>Alphadent</h1>
           <p>Book An Appointment Smile Confident!</p>
           <div className="btn-container">
-            <Link to="/book-appointment" className="btn">BOOK AN APPOINTMENT +</Link>
+            <Link to="/book-appointment" className="btn">BOOK APPOINTMENT +</Link>
             <a href="/about" className="btn secondary">READ MORE +</a>
           </div>
         </div>
@@ -74,7 +74,7 @@ const Home = () => {
           <h1>Alphadent</h1>
           <p>Book An Appointment Smile Confident!</p>
           <div className="btn-container">
-            <Link to="/book-appointment" className="btn">BOOK AN APPOINTMENT +</Link>
+            <Link to="/book-appointment" className="btn">BOOK APPOINTMENT +</Link>
             <a href="/about" className="btn secondary">READ MORE +</a>
           </div>
         </div>
@@ -90,7 +90,7 @@ const Home = () => {
           <h1>Alphadent</h1>
           <p>Book An Appointment Smile Confident!</p>
           <div className="btn-container">
-             <Link to="/book-appointment" className="btn">BOOK AN APPOINTMENT +</Link>
+             <Link to="/book-appointment" className="btn">BOOK APPOINTMENT +</Link>
             <a href="/about" className="btn secondary">READ MORE +</a>
           </div>
         </div>

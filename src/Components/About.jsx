@@ -73,7 +73,39 @@ const About = () => {
           <img src={whyus} alt="Smile Transformation" className="why-choose-image" />
         </div>
       </section>
+         <section className="features-section">
+        <h2 className="features-title"></h2>
+        <div className="features-cards">
+          <div className="feature-card">
+            <span className="feature-icon">😊</span>
+            <h3 className="feature-title">All-Around Comfort</h3>
+            <p className="feature-description">
+              "That wasn't painful at all" is one of our favorite things to hear. We'll make
+              sure you feel completely comfortable with our virtually painless injections
+              and calming nitrous options.
+            </p>
+          </div>
+          <div className="feature-card">
+            <span className="feature-icon">🏠</span>
+            <h3 className="feature-title">Just Like Home</h3>
+            <p className="feature-description">
+              We're a family dental office — and we mean that in more ways than one.
+              Our friendly staff is committed to making you feel part of our family
+              from day one.
+            </p>
+          </div>
+          <div className="feature-card">
+            <span className="feature-icon">⭐</span>
+            <h3 className="feature-title">Highest Quality Treatment</h3>
+            <p className="feature-description">
+              You deserve a smile that lasts forever. We stand behind our work by
+              providing the highest-quality treatments.
+            </p>
+          </div>
+        </div>
+      </section>
     </div>
+    
   );
 };
 

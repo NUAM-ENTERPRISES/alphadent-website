@@ -113,10 +113,14 @@
 }
 
 .overlay h1 {
-  font-size: 1.5rem;
+  font-size: 32px;
   font-weight: 600;
   margin-bottom: 310px;
   text-shadow: rgba(0, 0, 0, 0.5) 2px 2px 4px;
+  transition: color 0.3s;
+  font-weight: bold;
+  color: #ffffffb3;
+
 }
 
 .service-card:hover .overlay,
@@ -127,7 +131,9 @@
 .overlay p {
   padding: 0.5rem;
   border-radius: 5px;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
+  line-height: 1.3;
+  font-size: 14.4px;
   margin: 0;
 }
 

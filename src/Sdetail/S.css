@@ -129,6 +129,7 @@
 
 .faq-item.open {
   background-color: white;
+  
 }
 
 .faq-question {
@@ -148,6 +149,12 @@
   color: #035c5c;
   animation: slideDown 0.3s ease;
   font-size: 22px;
+  
+}
+.faq-item.open .faq-answer {
+    max-height: 360px;
+    opacity: 1;
+    padding: 1rem 1.5rem;
 }
 
 @keyframes slideDown {
@@ -180,6 +187,21 @@
   display: block;
   margin: 0 auto; /* ✅ Center horizontally on all screens */
 }
+.sub-points, .faq-points {
+ text-align: left;
+  font-size: 18px;
+  line-height: 1.6;
+  color:#555;
+}
+
+.sub-points li,
+.faq-points li {
+  list-style-type: disc;
+  margin-bottom: 6px;
+  line-height: 1.5;
+  font-size: 18px;
+}
+
 
 /* Responsive for Tablets and Below */
 @media (max-width: 768px) {

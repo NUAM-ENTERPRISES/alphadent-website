@@ -14,7 +14,6 @@ const ServiceDetails = () => {
     setFadeIn(true);
     window.scrollTo(0, 0);
 
-    // Find service by title (case-insensitive match)
     const foundService = services.find(
       (s) => s.title.toLowerCase() === decodeURIComponent(serviceTitle).toLowerCase()
     );
@@ -64,7 +63,16 @@ const ServiceDetails = () => {
           {details.subSections.map((section, index) => (
             <div key={index} className="subsection-card slide-in">
               <h3>{section.subheading}</h3>
-              <p>{section.paragraph}</p>
+
+              {section.paragraph && <p>{section.paragraph}</p>}
+
+              {section.points && (
+                <ul className="sub-points">
+                  {section.points.map((point, idx) => (
+                    <li key={idx}>{point}</li>
+                  ))}
+                </ul>
+              )}
             </div>
           ))}
         </div>
@@ -72,7 +80,7 @@ const ServiceDetails = () => {
 
       {details?.galleryImages?.length > 0 && (
         <div className="service-gallery">
-          <h2 className='gallery'>Gallery</h2>
+          <h2 className="gallery">Gallery</h2>
           <div className="gallery-grid">
             {details.galleryImages.map((img, idx) => (
               <div key={idx} className="gallery-item zoom-in">
@@ -83,18 +91,29 @@ const ServiceDetails = () => {
         </div>
       )}
 
-      {details?.faq?.length > 0 && (
-        <div className="service-faq">
-          <h2 className='faq'>Frequently Asked Questions</h2>
-          {details.faq.map((item, index) => (
-            <div key={index} className={`faq-item ${openIndexes.includes(index) ? 'open' : ''}`}>
-              <div className="faq-question" onClick={() => toggleFAQ(index)}>
-                <h4>{item.question}</h4>
-                <span>{openIndexes.includes(index) ? '-' : '+'}</span>
-              </div>
-              {openIndexes.includes(index) && (
-                <div className="faq-answer">
-                  <p>{item.answer}</p>
+     {details?.faq?.length > 0 && (
+  <div className="service-faq">
+    <h2 className="faq">Frequently Asked Questions</h2>
+    {details.faq.map((item, index) => (
+      <div key={index} className={`faq-item ${openIndexes.includes(index) ? 'open' : ''}`}>
+        <div className="faq-question" onClick={() => toggleFAQ(index)}>
+          <h4>{item.question}</h4>
+          <span>{openIndexes.includes(index) ? '-' : '+'}</span>
+        </div>
+
+        {openIndexes.includes(index) && (
+          <div className="faq-answer">
+            {item.paragraph && <p>{item.paragraph}</p>}
+
+            {Array.isArray(item.answer) && (
+              <ul className="faq-points">
+                {item.answer.map((point, idx) => (
+                  <li key={idx}>{point}</li>
+                ))}
+              </ul>
+            )}
+
+            {!Array.isArray(item.answer) && <p>{item.answer}</p>}
                 </div>
               )}
             </div>

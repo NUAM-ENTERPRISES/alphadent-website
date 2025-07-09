@@ -1,3 +1,79 @@
+.group-heading {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #035c5c;
+  margin: 1.5rem 0 1rem;
+  cursor: pointer;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.5rem;
+}
+
+.group-heading:hover {
+  color: #023e3e;
+}
+
+/* Dropdown animation */
+.dropdown-wrapper {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.6s ease;
+}
+/* When dropdown is open */
+.dropdown-wrapper.open {
+  max-height: 3000px; /* Or a large value that covers any possible content */
+}
+/* Group card */
+.group-card {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  margin: 2rem auto;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.group-card:hover {
+  transform: scale(1.02);
+}
+
+.group-card-img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+.group-card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 1.5rem;
+}
+
+.group-arrow {
+  font-size: 2rem;
+  color: white;
+  transition: transform 0.4s ease;
+}
+
+.group-arrow.rotate {
+  transform: rotate(180deg);
+}
+
+.group-card-title {
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
 /* Wrapper */
 .dentalcard-wrapper {
   padding: 2rem;
@@ -28,13 +104,10 @@
   overflow: hidden;
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
   background-color: white;
-  opacity: 0;
-  transform: translateY(100px);
-  transition: opacity 0.6s ease, transform 0.6s ease, box-shadow 0.3s ease;
   width: calc(50% - 1rem);
   max-width: 600px;
   height: 400px;
-  will-change: transform, box-shadow;
+  transition: box-shadow 0.3s ease;
 }
 
 .dentalcard-flex-card.fade-in {
@@ -46,7 +119,6 @@
   transform: scale(1.05);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
 }
-
 
 /* Content */
 .dentalcard-content {
@@ -109,19 +181,48 @@
   transform: scale(1.05);
 }
 
-/* Responsive */
+/* Responsive - Tablet and Mobile */
 @media (max-width: 768px) {
+  .group-card {
+    margin: 1rem auto;
+    width: 100%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+
+  .group-card-img {
+    height: 200px;
+  }
+
+  .group-card-overlay {
+    padding: 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .group-card-title {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .group-arrow {
+    font-size: 1.5rem;
+    align-self: flex-end;
+  }
+
   .dentalcard-grid {
     flex-direction: column;
+    padding: 0 0.5rem;
+    gap: 1.5rem;
   }
 
   .dentalcard-flex-card {
     width: 100%;
+    max-width: 100%;
     height: auto;
   }
 
   .dentalcard-content {
-    flex-direction: column !important; /* ✅ Makes image stack on top */
+    flex-direction: column !important;
   }
 
   .dentalcard-image,
@@ -137,6 +238,49 @@
   }
 
   .dentalcard-text {
-    padding: 1.2rem;
+    padding: 1rem;
+    text-align: center;
   }
+
+  .dentalcard-text h3 {
+    font-size: 1.3rem;
+  }
+
+  .dentalcard-text p {
+    font-size: 0.95rem;
+  }
+
+  .read-more-btn {
+    font-size: 0.85rem;
+    margin: 0 auto;
+  }
+}
+
+/* Extra Small Devices */
+@media (max-width: 480px) {
+  .group-heading {
+    font-size: 1.1rem;
+  }
+
+  .section-heading {
+    font-size: 1.6rem;
+  }
+
+  .group-card-title {
+    font-size: 1.2rem;
+    margin-top: 140px;
+  }
+
+  .dentalcard-text h3 {
+    font-size: 1.1rem;
+  }
+
+  .dentalcard-text p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Prevent horizontal scroll */
+html, body {
+  overflow-x: hidden;
 }

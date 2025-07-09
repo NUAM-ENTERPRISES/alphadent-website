@@ -10,6 +10,7 @@ const Footer = () => {
       <div className="footer-content">
         <div className="footer-left">
           <img src={logo} alt="Dental Clinic Logo" className="footer-logo" />
+           <span className="logotext" >Alphadent</span>
           <div className="contact-info">
             <p>
               <FaMapMarkerAlt className="contact-icon" />

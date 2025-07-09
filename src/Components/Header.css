@@ -74,6 +74,16 @@
 .nav .logo:hover {
   opacity: 1;
 }
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* spacing between logo and text */
+}
+.logo-text {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ffffff; /* or match your theme */
+}
 
 /* Mobile Logo in Hamburger Menu */
 .mobile-logo {
@@ -265,6 +275,9 @@
 }
 
 @media (max-width: 480px) {
+  .logo-text {
+    font-size: 1rem;
+  }
   .header {
     display: none;
   }
@@ -291,4 +304,5 @@
   .mobile-logo {
     height: 40px;
   }
+
 }

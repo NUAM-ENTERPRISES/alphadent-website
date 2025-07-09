@@ -35,6 +35,12 @@
   height: auto;
   margin-bottom: 20px;
 }
+.logotext {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ffffff; /* or match your theme */
+  margin-left: 10px;
+}
 
 .contact-info {
   text-align: center;

@@ -68,7 +68,11 @@ const Head = () => {
       </div>
 
       <div className="nav">
-        <img src={logo} alt="Alphadent Logo" className="logo" />
+        <div className="logo-wrapper">
+         <img src={logo} alt="Alphadent Logo" className="logo" />
+        <span className="logo-text">Alphadent</span>
+        </div>
+        
 
         <div
           className={`hamburger ${menuOpen ? 'open' : ''}`}

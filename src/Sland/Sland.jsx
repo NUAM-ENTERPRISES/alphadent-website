@@ -6,7 +6,6 @@ import Gallery from '../ServiceComponent/Gallery';
 const Sland = () => {
   return (
     <>
-     <Shome />
     <ServiceDetails />
     </>
   );

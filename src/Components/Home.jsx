@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Home.css';
 import video1 from '../assets/video/video1.mp4'; // ✅ Import local video file
-import video2 from '../assets/video/video2.mp4'; // ✅ Import local video file
 import video3 from '../assets/video/video3.mp4';
 import video4 from '../assets/video/video4.mp4';
+import video5 from '../assets/video/video5.mp4'
 
 const Home = () => {
   const [slideIndex, setSlideIndex] = useState(1);
@@ -51,7 +51,7 @@ const Home = () => {
       {/* Slide 2 */}
       <div className="slide" style={{ transform: `translateX(${(1 - (slideIndex - 1)) * 100}%)` }}>
         <video autoPlay muted loop>
-          <source src={video2} type="video/mp4" />
+          <source src={video5} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         <div className="slide-content">

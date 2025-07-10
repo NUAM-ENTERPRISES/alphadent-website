@@ -1,4 +1,4 @@
-// src/data/services.js
+
 import aligners from '../assets/aligners.jpg';
 import healthreview from '../assets/healthreview.jpg';
 import implants from '../assets/implants-.jpg';
@@ -10,25 +10,25 @@ import whitening from '../assets/whitening.jpg';
 import lasers from '../assets/lasers.jpg';
 import rehab from '../assets/rehab.jpg';
 import rootcanal from '../assets/rootcanal.jpg';
-import D1 from '../assets/D1.jpg';
-import D2 from '../assets/D2.jpg';
-import dhealth from '../assets/dhealth.png';
-import D3 from '../assets/D3.jpg';
-import i1 from '../assets/i1.jpg';
-import i3 from '../assets/i3.jpg';
-import i4 from '../assets/i4.jpg';
-import i5 from '../assets/i5.jpg';
-import g1 from '../assets/g1.jpg';
-import g2 from '../assets/g2.jpg';
-import g3 from '../assets/g3.jpg';
+// import D1 from '../assets/D1.jpg';
+// import D2 from '../assets/D2.jpg';
+// import dhealth from '../assets/dhealth.png';
+// import D3 from '../assets/D3.jpg';
+// import i1 from '../assets/i1.jpg';
+// import i3 from '../assets/i3.jpg';
+// import i4 from '../assets/i4.jpg';
+// import i5 from '../assets/i5.jpg';
+// import g1 from '../assets/g1.jpg';
+// import g2 from '../assets/g2.jpg';
+// import g3 from '../assets/g3.jpg';
 import gg1 from '../assets/gg1.jpg';
 import gg2 from '../assets/gg2.jpg';
 import gg4 from '../assets/gg4.jpg';
 // import g4 from '../assets/g4.jpg';
 import g5 from '../assets/g5.png';
-import c1 from '../assets/c1.png';
-import c2 from '../assets/c2.png';
-import c3 from '../assets/c3.png';
+// import c1 from '../assets/c1.png';
+// import c2 from '../assets/c2.png';
+// import c3 from '../assets/c3.png';
 import crown from '../assets/crown.jpg'
 const services = [
   {

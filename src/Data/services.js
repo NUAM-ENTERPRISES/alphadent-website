@@ -1,4 +1,4 @@
-// src/data/services.js
+
 import aligners from '../assets/aligners.jpg';
 import healthreview from '../assets/healthreview.jpg';
 import implants from '../assets/implants-.jpg';

@@ -21,6 +21,9 @@ import i5 from '../assets/i5.jpg';
 import g1 from '../assets/g1.jpg';
 import g2 from '../assets/g2.jpg';
 import g3 from '../assets/g3.jpg';
+import gg1 from '../assets/gg1.jpg';
+import gg2 from '../assets/gg2.jpg';
+import gg4 from '../assets/gg4.jpg';
 // import g4 from '../assets/g4.jpg';
 import g5 from '../assets/g5.png';
 import c1 from '../assets/c1.png';
@@ -35,7 +38,7 @@ const services = [
     points:['Regular checkups keep your teeth and gums healthy.','Professional cleaning prevents cavities and bad breath','Good oral hygiene boosts overall well-being.'],
     details: {
       heading: 'About Dental Health Review',
-      betweenImage: dhealth,
+      betweenImage: healthreview,
       subSections: [
         { subheading: ' Dental Health Review', paragraph: 'At Alphadent dental clinic, prevention is key to maintaining optimal oral health. That’s why we offer comprehensive Dental Health Reviews – a vital first step for anyone seeking a healthy and confident smile. Your Dental Health Review is a thorough examination conducted by our highly skilled dental professionals. It goes beyond a simple check-up, providing a detailed assessment of your oral health and forming the foundation for a personalized treatment plan.' },
         { subheading: 'Benefits Of A Regular Dental Health Review', 
@@ -48,7 +51,7 @@ const services = [
      },
         { subheading: 'Dental Health Review Price List', paragraph: 'While we aim for transparent pricing at Alphadent dental clinic, the individualised nature of dental work means costs can vary. Online pricing is for guidance only; a consultation is required for a personalised and accurate quote. New Patient Consultation (Adult): Rs 300' }
       ],
-      galleryImages: [D1, D2, D3],
+      galleryImages: [gg1, gg2, gg4],
       faq: [
         { question: 'What is a dental health review?', answer: 'A dental health review is a comprehensive assessment of your oral health. It includes a thorough examination of your teeth, gums, and jaw, as well as a discussion of your dental history and any concerns you may have.' },
         { question: 'How often should I get a dental health review?', answer: 'The frequency of dental health reviews depends on your individual needs and risk factors. However, most dentists recommend at least two reviews per year.' },
@@ -75,7 +78,7 @@ const services = [
      points:['Dental implants restore missing teeth naturally.','They provide strong, long-lasting support.','Improve your smile and chewing comfort.'],
     details: {
       heading: 'About Dental Implants',
-      betweenImage: i4,
+      betweenImage: implants,
       subSections: [
         { subheading: 'Dental Implants', paragraph: 'Explore cutting-edge dental implant solutions with digital protocols.Dealing with a missing tooth can be frustrating and uncomfortable.The Perfect Solution to Replace Missing Teeth Form, function and aesthetics are at the forefront of our dental implant solutions.Single, multiple or full mouth dental implants are the best solution to replace damaged or missing teeth.This natural tooth replacement method has been effectively utilised by millions of people worldwide for more than 50 years. At Alphadent dental  Clinic, we provide advanced dental solutions that can restore your smile. ',
           points:['Look Younger:Missing teeth may make your face look sunken and older than your age. Implants give you a well-balanced jawline, improve your smile.','Life-long Solution: They are strong and extremely durable, lasting for a lifetime.','chew easily:implant functions like natural tooth, so you can enjoy all foods without discomfort in biting and chewing'],
@@ -93,7 +96,7 @@ const services = [
         { subheading:'Who is a Candidate for Dental Implants?',paragraph:'Not everyone is an ideal candidate for dental implants. Factors such as bone density, overall health, and oral hygiene play a crucial role in determining candidacy. A thorough evaluation by our dental professionals will help assess individual suitability for this treatment.'},
         {subheading:'Cost of Dental Implants',paragraph:'The cost of dental implants can vary based on several factors, including the type of implant, the complexity of the procedure, and any additional treatments required. We offer transparent pricing and financing options to make dental implants accessible to more patients.'},
       ],
-      galleryImages: [i1, i3, i5],
+      galleryImages: [gg1, gg2, gg4],
       faq: [
         { question: 'What Are Dental Implants And How Do They Work?', answer: 'Dental implants are titanium posts surgically placed into the jawbone to replace missing tooth roots.They provide a stable foundation for crowns, bridges, or dentures.' },
         { question: 'How Long Does The Dental Implant Process Take?', answer: 'The process can take 3 months, including healing time for osseointegration (fusion of the implant with the bone).' },
@@ -115,7 +118,7 @@ const services = [
      points:['We care for your teeth with routine checkups.','Cleanings and fillings keep your smile healthy.','Early treatment prevents bigger dental issues.'],
     details: {
       heading: 'About General Dentistry',
-      betweenImage: g5,
+      betweenImage: general,
       subSections: [
         { subheading: 'General Dentistry', paragraph: 'General dentistry encompasses a comprehensive range of dental services essential for maintaining optimal oral health. From routine check-ups and cleanings to preventative treatments like fillings and extractions, general dentistry forms the foundation of a healthy smile. It’s the proactive approach to oral care that helps prevent serious dental issues, ensuring your teeth and gums remain in excellent condition.' },
         { subheading: 'Why Choose Alphadent For Your General Dental Care?', paragraph: 'At Alphadent Clinic, we’re committed to providing comprehensive general dental care to patients of all ages. Our experienced dentists prioritise your oral health and comfort, ensuring you receive the highest quality care in a friendly and welcoming environment. Dentistry Is Our Passion, Our Mission.Whether you’re seeking routine dental check-ups, cosmetic treatments, or restorative procedures, we have the expertise and technology to deliver exceptional results.' },
@@ -145,7 +148,7 @@ const services = [
         {subheading:'How Much Does Treatment Cost?',paragraph:'While we aim for transparent pricing, the individual nature of dental work means costs can vary.'},
         {subheading:'Periodontics.',paragraph:'At Alphadent dental clinic, we understand the importance of healthy gums for a beautiful and functional smile. Our team of experienced dentists covers all of comprehensive periodontics services to treat and prevent gum disease, keeping your teeth strong and healthy for life.'}
       ],
-      galleryImages: [g1, g2, g3],
+       galleryImages: [gg1, gg2, gg4],
       faq: [
         { question: 'What is general dentistry?', answer: 'Dental hygiene is the practice of maintaining the health of your teeth and gums. It involves regular brushing and flossing, along with professional cleanings by a dentist or dental hygienist.' },
         { question: 'How Often Should I Have A Dental Hygiene Appointment?', answer: 'During a dental hygiene appointment, your dentist/hygienist will clean your teeth to remove plaque and tartar buildup. They will also examine your gums for signs of gum disease and provide you with personalized oral hygiene advice.' },
@@ -219,7 +222,7 @@ const services = [
         { subheading: 'Invisalign aligners', paragraph: 'The treatment is completed in short span of time of about 6-12 months, displaying the desired results. Comfortable, clear and removable – Invisalign Clear Braces have transformed the smile of 3 million people worldwide without disrupting their lifestyle. You can get visibly straighter teeth in 3 months!' },
         { subheading:'Braces',paragraph:'Self ligating Metal braces and Ceramic braces.'},
       ],
-      galleryImages: [c1, c2, c3],
+        galleryImages: [gg1, gg2, gg4],
       faq: [
         { question: 'What are the Benefits of clear aligners?', answer: 'Aesthetic Appeal,Comfort,Removability,Customized Treatment,Fewer Office Visits,Predictable Results..' },
         { question: 'Who can benefit from clear aligners?', answer: 'Clear aligners are suitable for a wide range of orthodontic issues, including : Mild to moderate crooked teeth,Gaps between teeth,Overbite and underbite correction,Crossbite.' },
@@ -251,7 +254,7 @@ const services = [
         {subheading:'Facial Trauma Repair',paragraph:'Facial trauma can result from accidents or injuries that affect the bones and soft tissues of the face. Our oral surgeons are skilled in repairing facial fractures and restoring function and appearance.'},
         {subheading:'Oral Pathology Treatment',paragraph:'Oral pathology involves the diagnosis and treatment of diseases affecting the mouth and surrounding structures. Our team provides comprehensive care for various oral conditions, ensuring early detection and effective treatment.'},
       ],
-      galleryImages: [],
+        galleryImages: [gg1, gg2, gg4],
       faq: [
         { question: 'What is oral surgery?', answer: 'Oral surgery involves surgical procedures to treat conditions affecting'},
 
@@ -273,7 +276,7 @@ const services = [
         { subheading:'Composte bonding Veneers',paragraph:'Are you dreaming of a flawless smile?',points:['Do you have minor imperfections like chipped teeth, gaps, or discoloration that you’d like to address? At Alphadent Clinic, we offer composite bonding veneers, a minimally invasive and cost-effective solution to enhance your smile’s natural beauty.']},
         {subheading:'Porcelain veneers:',paragraph:'Are you looking to achieve the smile of your dreams? Porcelain veneers at Alphadent dental Clinic, Nizampet offer a transformative solution to correct imperfections and create a stunning, natural-looking smile. If you’re self-conscious about chipped, cracked, discolored, or misaligned teeth, veneers could be the perfect option for you.'}
       ],
-      galleryImages: [],
+        galleryImages: [gg1, gg2, gg4],
       faq:[
         { question: 'What are the Benefits of clear aligners?', answer: 'Aesthetic Appeal,Comfort,Removability,Customized Treatment,Fewer Office Visits,Predictable Results..' },
         {question:'What Exactly Are Composite Bonding Veneers?',answer:'Composite bonding veneers involve applying a tooth-colored resin material to your teeth to correct minor imperfections and enhance your smile.'},
@@ -316,7 +319,7 @@ const services = [
         {subheading:'Our Paediatric Dentistry Services',points:['Emergency and Trauma Care','Preventative Treatments: Fluoride applications and sealants to protect against cavities','Management of Tooth Decay: Early intervention and fillings','Growth & Development Analysis','General Anaesthetic Treatments: Complex dental procedures performed in a safe environment.']},
         { subheading:'Oral Health Education Guidance for children and parents on maintaining healthy teeth and gums.',paragraph:'Our goal is to keep your child’s teeth healthy while making your child feel comfortable. You can help make the first visit to our clinic enjoyable and positive.All instruments will be shown to your child who can touch and experience them on their fingers before your child even opens their mouth. Our staff works together to develop a special relationship with each family so that going to the dentist can be a pleasant experience for both the parent and child.'}
       ],
-      galleryImages: [],
+       galleryImages: [gg1, gg2, gg4],
       faq:[
         { question: 'What is pediatric dentistry?', answer: 'Pediatric dentistry is the practice of dentistry for children, aged 2 to 12 years old. Pediatric dentists are trained to manage the dental and emotional needs of children, including those with additional medical or developmental needs.' },
       ],
@@ -334,7 +337,7 @@ const services = [
         { subheading:'In-house teeth whitening:',paragraph:'For brighter teeth in 1 hour: Bring back the sparkle in your smile. Transform your dull, stained or yellowish teeth into the perfect set of pearly whites in under an hour.'},
         { subheading:'Home whitening kits:',paragraph:'We recommend combining our in-office teeth whitening system with at-home whitening treatments. This dual approach maximizes your whitening potential, allowing for a brighter smile while maintaining comfort and convenience. By utilizing both methods, you can achieve optimal results and enjoy a radiant smile that lasts.'}
       ],
-      galleryImages: [],
+        galleryImages: [gg1, gg2, gg4],
       faq:[
         { question: 'What is teeth whitening?', answer: 'Teeth whitening is a cosmetic dental procedure that helps to lighten the color of your teeth. It can be done in a dental office or at home.' },
         { question:'How Does Teeth Whitening Work?',answer:'Teeth whitening typically uses a bleaching agent, such as hydrogen peroxide or carbamide peroxide, to lighten the color of stains on your teeth.'},
@@ -360,7 +363,7 @@ const services = [
         { subheading: 'Benefits of Laser Dentistry', paragraph: 'Laser treatments offer numerous advantages, including reduced bleeding, less pain, and faster healing times compared to traditional methods. Patients often experience less anxiety and discomfort, making dental visits more pleasant.' },
         { subheading:'Safety and Effectiveness',paragraph:'Laser dentistry is considered safe when performed by trained professionals. Extensive research supports its effectiveness in various dental treatments, making it a reliable option for both patients and practitioners. As technology continues to advance, laser treatments in dentistry are becoming increasingly popular. They provide a modern approach to dental care, enhancing both the quality of treatment and patient satisfaction.'}
       ],
-      galleryImages: [],
+        galleryImages: [gg1, gg2, gg4],
       faq:[
         { question: 'What is laser dental services?', answer: 'Laser dental services are a safe, effective, and painless dental treatment that can help you achieve your desired smile. They can be used to treat various areas of your teeth, including the front, back, and bridge, as well as gum, mouth, and jaw.' },
         { question: 'How long does laser dental services work?', answer: 'Laser dental services typically use a laser beam to remove damaged tooth enamel, and then fill the space with a new tooth. The treatment can take anywhere from 30 to 60 minutes.' },
@@ -381,7 +384,7 @@ const services = [
         { subheading:'The Rehabilitation Process',paragraph:'The process typically begins with an initial consultation to assess dental health and discuss treatment goals. A personalized plan is then developed, followed by the implementation of treatments in phases, if necessary, to achieve optimal results.'},
         { subheading:'Aftercare and Maintenance',paragraph:'Post-treatment care is crucial for maintaining the results of full mouth rehabilitation. Regular follow-up appointments and good oral hygiene practices are essential to ensure long-lasting health and functionality of the teeth and gums.'},
       ],
-      galleryImages: [],
+       galleryImages: [gg1, gg2, gg4],
       faq:[
         { question: 'What is full mouth rehabilitation?', answer: 'Full mouth rehabilitation is a comprehensive dental treatment that addresses multiple dental issues, restoring both function and aesthetics. It involves a combination of restorative and cosmetic procedures to improve the overall health and appearance of the mouth.' },
         { question: 'How long does full mouth rehabilitation take?', answer: 'The duration of full mouth rehabilitation varies depending on the complexity of the case and the specific procedures involved. Your dentist will provide an estimated timeline during your initial consultation.' },
@@ -406,7 +409,7 @@ const services = [
         { subheading:'Painless Root canal treatments',paragraph:'Don’t Fear The Root Canal Anymore We combine state-of-the-art technology with our expertise and soft-skill approach to ensure that every root canal procedure is precise, seamless and pain-free. Most of the root canal treatments at Alphadent are performed within 30 minutes by our experts who make sure you are always comfortable and relaxed. We understand that people fear root canals and tend to avoid undergoing the treatment. However, our specialists carefully craft the entire process to eliminate any fear attached to this procedure. In fact, we turn it into a very positive experience.,A root canal treatment entails removing the infected soft tissue within the tooth and replacing it with an artificial inert ‘filling’ material. This procedure not only saves the tooth but also eliminates dental pain.'},
         { subheading:'How much does it cost?',paragraph:'While we aim for transparent pricing at Alphadent dental clinic, the individual nature of dental treatment means costs can vary. For further questions contact us 9088708879.For painless Root canal treatments you can schedule appointment by calling our office at 9088708870 or by booking an online appointment.'}
       ],
-      galleryImages: [],
+       galleryImages: [gg1, gg2, gg4],
       faq:[
         { question: 'What is painless root canal treatment?', answer: 'Painless root canals are a safe, effective, and pain-free dental treatment that can help you achieve your desired smile. They involve removing damaged tooth enamel, filling the space with a new tooth, and then re-aligning the damaged teeth.' },
         {question:'How much does it cost?',paragraph:'While we aim for transparent pricing at Alphadent dental clinic, the individual nature of dental treatment means costs can vary. For further questions contact us 9088708879. For painless Root canal treatments you can schedule appointment by calling our office at  9088708870 or by booking an online appointment.'},
@@ -422,7 +425,8 @@ const services = [
       betweenImage: crown,
       subSections: [
         { subheading: 'Crown and bridges', paragraph: 'Experience A Transformation In One Visit.A crown can be custom-designed and are manufactured using a milling machine guided by software to deliver unmatched accuracy of the fit and bite.We offer upto 20-year warranty on crowns at affordable prices.A crown is used to entirely cover or “cap” a damaged tooth. Besides strengthening a damaged tooth, a crown can be used to improve its appearance, shape or alignment. A crown can also be placed on top of an implant to provide a tooth-like shape and structure for function.A crown will give protection against further decay or erosion and an improved looking smile, and helps to hide that badly chipped tooth or those unsightly-looking front teeth. If you were self-conscious about your smile before this treatment, you will be pleasantly surprised by the outcome. Bridges are commonly used to replace one or more missing teeth. They cover the space where the teeth are missing. Bridges are cemented to the natural teeth or implants surrounding the empty space.A bridge can prevent bone loss, gum disease or decay caused by the presence of food debris in the gap and relieve pressure on the teeth either side of the gap.It will also improve your smile and your appearance.We provide a personalized quote during your consultation. For any further details call us at 9088708870'},
-        ]
+        ],
+          galleryImages: [gg1, gg2, gg4],
       }
    }
 ];
